@@ -8,6 +8,8 @@
     <style>
         :root {
             --background_card_plan: url('<?= $DATA['http_domain'] ?>public/img/img1.jpg');
+            --url_bg_wave_top: url('<?= $DATA['http_domain'] ?>public/img/bg_wave_top.svg');
+            --url_bg_wave_bottom: url('<?= $DATA['http_domain'] ?>public/img/bg_wave_bottom.svg');
         }
     </style>
 </head>
