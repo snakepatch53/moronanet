@@ -19,7 +19,7 @@ class UserService
         )) {
             $user_user = $_POST['user_user'];
             $user_pass = $_POST['user_pass'];
-            $user_rs = $userDao->login($user_user, $user_pass);
+            $user_rs = $userDao->login($user_user, addslashes($user_pass));
             $user_r = mysqli_fetch_assoc($user_rs);
             if (mysqli_num_rows($user_rs) > 0) {
                 if (

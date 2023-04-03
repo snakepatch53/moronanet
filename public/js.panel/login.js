@@ -31,7 +31,6 @@ function handleSubmit(event) {
     const formData = new FormData($formLogin);
     try {
         fetch_query(formData, "user", "login").then((res) => {
-            // console.log(res);
             try {
                 showMsg(res.message);
                 if (res.response) return (location.href = http_domain + "panel");
