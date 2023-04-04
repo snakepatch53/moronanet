@@ -28,73 +28,35 @@ class MensajeService
             'data' => null
         ];
         if (isset(
-            $_POST['mensaje_nombre'],
-            $_POST['mensaje_celular'],
+            $_POST['mensaje_name'],
+            $_POST['mensaje_affair'],
+            $_POST['mensaje_phone'],
             $_POST['mensaje_email'],
-            $_POST['mensaje_mensaje']
+            $_POST['mensaje_message']
         )) {
             $mensajeDao = new MensajeDao($adapter);
-            $mensaje_nombre = $_POST['mensaje_nombre'];
-            $mensaje_celular = $_POST['mensaje_celular'];
+
+            $mensaje_name = $_POST['mensaje_name'];
+            $mensaje_affair = $_POST['mensaje_affair'];
+            $mensaje_phone = $_POST['mensaje_phone'];
             $mensaje_email = $_POST['mensaje_email'];
-            $mensaje_mensaje = $_POST['mensaje_mensaje'];
-            $mensaje = $mensajeDao->insert(
-                $mensaje_nombre,
-                $mensaje_celular,
+            $mensaje_message = $_POST['mensaje_message'];
+
+            $resultset = $mensajeDao->insert(
+                $mensaje_name,
+                $mensaje_affair,
+                $mensaje_phone,
                 $mensaje_email,
-                $mensaje_mensaje
+                $mensaje_message
             );
             $result['status'] = 'success';
             $result['message'] = 'Mensaje ingresado correctamente';
             $result['response'] = true;
-            $result['data'] = $mensaje;
+            $result['data'] = $resultset;
         }
         echo json_encode($result);
     }
-    public static function update($DATA)
-    {
-        header('Content-Type: application/json');
-        header('Access-Control-Allow-Origin: *');
-        $adapter = $DATA['mysqlAdapter'];
-        $result = [
-            'status' => 'error',
-            'message' => 'Faltan datos para actualizar el mensaje',
-            'response' => false,
-            'data' => null
-        ];
-        if (isset(
-            $_POST['mensaje_id'],
-            $_POST['mensaje_nombre'],
-            $_POST['mensaje_celular'],
-            $_POST['mensaje_email'],
-            $_POST['mensaje_mensaje']
-        )) {
-            $mensajeDao = new MensajeDao($adapter);
-            $mensaje_id = $_POST['mensaje_id'];
-            $mensaje_nombre = $_POST['mensaje_nombre'];
-            $mensaje_celular = $_POST['mensaje_celular'];
-            $mensaje_email = $_POST['mensaje_email'];
-            $mensaje_mensaje = $_POST['mensaje_mensaje'];
-            $mensaje = $mensajeDao->selectById($mensaje_id);
-            if (!$mensaje) {
-                $result['message'] = 'El mensaje no existe';
-                echo json_encode($result);
-                exit();
-            }
-            $mensaje = $mensajeDao->update(
-                $mensaje_id,
-                $mensaje_nombre,
-                $mensaje_celular,
-                $mensaje_email,
-                $mensaje_mensaje
-            );
-            $result['status'] = 'success';
-            $result['message'] = 'Mensaje actualizado correctamente';
-            $result['response'] = true;
-            $result['data'] = $mensaje;
-        }
-        echo json_encode($result);
-    }
+
     public static function delete($DATA)
     {
         header('Content-Type: application/json');
@@ -115,7 +77,12 @@ class MensajeService
                 echo json_encode($result);
                 exit();
             }
-            $mensaje = $mensajeDao->deleteById($mensaje_id);
+            $resultset = $mensajeDao->delete($mensaje_id);
+            if (!$resultset) {
+                $result['message'] = 'No se pudo eliminar el mensaje';
+                echo json_encode($result);
+                return;
+            }
             $result['status'] = 'success';
             $result['message'] = 'Mensaje eliminado correctamente';
             $result['response'] = true;

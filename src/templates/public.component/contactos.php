@@ -34,13 +34,13 @@
 
     <div class="col col2">
         <h2>Déjanos un mensaje</h2>
-        <form onsubmit="return false">
-            <input type="text" name="contact_form_name" placeholder="Nombre Apellido *">
-            <input type="text" name="contact_form_asunto" placeholder="Asunto *">
-            <input type="text" name="contact_form_contacto" placeholder="Contacto *">
-            <input type="text" name="contact_form_email" placeholder="Correo *">
-            <textarea name="contact_form_mensaje" placeholder="Mensaje *"></textarea>
-            <p class="msg" id="contact-form-static-msg">Ingrese datos correctos!</p>
+        <form onsubmit="return false" id="contactform">
+            <input type="text" name="mensaje_name" placeholder="Nombre Apellido *">
+            <input type="text" name="mensaje_affair" placeholder="Asunto *">
+            <input type="text" name="mensaje_phone" placeholder="Contacto *">
+            <input type="text" name="mensaje_email" placeholder="Correo *">
+            <textarea name="mensaje_message" placeholder="Mensaje *"></textarea>
+            <p class="msg" id="contact-form-static-msg"></p>
             <input type="submit">
         </form>
     </div>

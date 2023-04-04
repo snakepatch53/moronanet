@@ -30,6 +30,7 @@
 
 <foot>
     <?php include('./src/templates/public.component/foot.php') ?>
+    <script src="<?= $DATA['http_domain'] ?>public/js.public/contactos.component.js"></script>
 </foot>
 
 </html>

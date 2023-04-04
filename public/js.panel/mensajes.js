@@ -40,10 +40,11 @@ const handleFunction = {
     edit: function ($register_id) {
         const register = uiFunction.database.find((el) => el["mensaje_id"] == $register_id);
         setValuesForm(register, $form);
-        $form.querySelector("#form_mensaje_nombre").innerText = register["mensaje_nombre"];
-        $form.querySelector("#form_mensaje_celular").innerText = register["mensaje_celular"];
+        $form.querySelector("#form_mensaje_name").innerText = register["mensaje_name"];
+        $form.querySelector("#form_mensaje_affair").innerText = register["mensaje_affair"];
+        $form.querySelector("#form_mensaje_phone").innerText = register["mensaje_phone"];
         $form.querySelector("#form_mensaje_email").innerText = register["mensaje_email"];
-        $form.querySelector("#form_mensaje_mensaje").innerText = register["mensaje_mensaje"];
+        $form.querySelector("#form_mensaje_message").innerText = register["mensaje_message"];
         bootstrap_modalform.show();
     },
     delete: function (register_id) {
@@ -87,12 +88,12 @@ const crudFunction = {
 const uiFunction = {
     database: [],
     giftDatabase: [],
-    getTr: function ({ mensaje_id, mensaje_nombre, mensaje_celular, mensaje_email }) {
+    getTr: function ({ mensaje_id, mensaje_name, mensaje_phone, mensaje_email }) {
         return `
             <tr>
                 <td class="d-none d-md-table-cell fw-bold">${mensaje_id}</td>
-                <td class="text-center text-md-left">${mensaje_nombre}</td>
-                <td class="d-none d-md-table-cell text-center text-md-left">${mensaje_celular}</td>
+                <td class="text-center text-md-left">${mensaje_name}</td>
+                <td class="d-none d-md-table-cell text-center text-md-left">${mensaje_phone}</td>
                 <td class="d-none d-md-table-cell text-center text-md-left">${mensaje_email}</td>
                 <td class="text-center">
                     <button class="btn btn-outline-primary" onclick="handleFunction.edit(${mensaje_id})">

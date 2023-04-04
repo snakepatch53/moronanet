@@ -62,14 +62,19 @@
                     <div class="modal-body">
                         <!-- form | ini -->
                         <div class="row g-3">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <label class="form-label">Emisor</label>
-                                <p class="form-control" id="form_mensaje_nombre"></p>
+                                <p class="form-control" id="form_mensaje_name"></p>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Asunto</label>
+                                <p class="form-control" id="form_mensaje_affair"></p>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Celular</label>
-                                <p class="form-control" id="form_mensaje_celular"></p>
+                                <p class="form-control" id="form_mensaje_phone"></p>
                             </div>
 
                             <div class="col-md-6">
@@ -79,7 +84,7 @@
 
                             <div class="col-md-12">
                                 <label class="form-label">Mensaje</label>
-                                <p class="form-control" id="form_mensaje_mensaje"></p>
+                                <p class="form-control" id="form_mensaje_message"></p>
                             </div>
 
                         </div>

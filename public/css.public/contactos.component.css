@@ -12,6 +12,8 @@ section.contactanos {
     --color4: #0378C0;
     --color5: #000000;
     --color6: #213E6E;
+    --color7: #a50e0e;
+    --color8: #269143;
 
     --color-des_home1: var(--global_color3);
     --color-des_home2: #255783;
@@ -170,6 +172,7 @@ section.contactanos .container .col.col2 form {
 
 section.contactanos .container .col.col2 form input,
 section.contactanos .container .col.col2 form textarea {
+
     background: var(--background6);
     border: solid 1px #ddd;
     padding: 15px 10px;
@@ -192,7 +195,15 @@ section.contactanos .container .col.col2 form textarea {
 
 section.contactanos .container .col.col2 form .msg {
     text-align: center;
-    color: var(--color4);
+    height: 30px;
+}
+
+section.contactanos .container .col.col2 form .msg.alert-danger {
+    color: var(--color7);
+}
+
+section.contactanos .container .col.col2 form .msg.alert-success {
+    color: var(--color8);
 }
 
 section.contactanos .container .col.col2 form input[type="submit"] {

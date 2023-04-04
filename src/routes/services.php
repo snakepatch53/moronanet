@@ -44,7 +44,7 @@ $radapter->post('/services/mensaje/insert', fn (...$args) => MensajeService::ins
 // need to be logged
 $radapter->post('/services/mensaje/select', fn () => middlewareSessionServicesLogin(), fn (...$args) => MensajeService::select(...$args));
 // $radapter->post('/services/mensaje/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => MensajeService::update(...$args));
-$radapter->post('/services/mensaje/delete', fn () => middlewareSessionServicesLogin(), fn () => fn (...$args) => MensajeService::delete(...$args));
+$radapter->post('/services/mensaje/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => MensajeService::delete(...$args));
 
 // PLANES
 $radapter->post('/services/plan/select', fn (...$args) => PlanService::select(...$args));

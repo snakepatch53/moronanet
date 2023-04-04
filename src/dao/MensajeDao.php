@@ -26,30 +26,34 @@ class MensajeDao
         return $row;
     }
 
-    // public function insert(
-    //     String $mensaje_name,
-    //     String $mensaje_ref
-    // ) {
-    //     return $this->mysqlAdapter->query("
-    //         INSERT INTO mensajes SET 
-    //             mensaje_name='$mensaje_name',
-    //             mensaje_ref='$mensaje_ref'
-    //     ");
-    // }
-    // public function update(
-    //     string $mensaje_name,
-    //     string $mensaje_ref,
-    //     int $mensaje_id
-    // ) {
-    //     return $this->mysqlAdapter->query("
-    //         UPDATE mensajes SET 
-    //             mensaje_name='$mensaje_name',
-    //             mensaje_ref='$mensaje_ref'
-    //         WHERE mensaje_id=$mensaje_id
-    //     ");
-    // }
+    public function insert(
+        string $mensaje_name,
+        string $mensaje_affair,
+        string $mensaje_phone,
+        string $mensaje_email,
+        string $mensaje_message
+
+    ) {
+        $mensaje_last = date("Y-m-d H:i:s");
+        $mensaje_created = date("Y-m-d H:i:s");
+        $resultset = $this->mysqlAdapter->query("
+            INSERT INTO mensajes SET 
+                mensaje_name='$mensaje_name',
+                mensaje_affair='$mensaje_affair',
+                mensaje_phone='$mensaje_phone',
+                mensaje_email='$mensaje_email',
+                mensaje_message='$mensaje_message',
+                mensaje_last='$mensaje_last',
+                mensaje_created='$mensaje_created'
+        ");
+        if ($resultset) return $this->getLastId();
+        return 0;
+    }
+
     public function delete(int $mensaje_id)
     {
-        return $this->mysqlAdapter->query("DELETE FROM mensajes WHERE mensaje_id = $mensaje_id ");
+        $resutset = $this->mysqlAdapter->query("DELETE FROM mensajes WHERE mensaje_id = $mensaje_id ");
+        if ($resutset) return true;
+        return false;
     }
 }
