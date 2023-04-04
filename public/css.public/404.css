@@ -112,7 +112,7 @@ main img {
 
 /*STARS*/
 main {
-    height: calc(100vh - var(--header-height) - 30px);
+    height: calc(100vh - var(--header-height) - 35px);
     position: relative;
     background: #22303a;
     overflow-x: hidden;
