@@ -19,6 +19,14 @@ class PlanDao
         }
         return $result;
     }
+    public function selectBasicPlan_price()
+    {
+        $reultset = $this->mysqlAdapter->query("SELECT MIN(plan_price_value) AS price FROM plan WHERE plan_price_value != 0;");
+        $row = mysqli_fetch_assoc($reultset);
+        $price = $row['price'];
+        if ($price == null) return 0;
+        return $row['price'];
+    }
     public function selectById(int $plan_id)
     {
         $resultset = $this->mysqlAdapter->query("SELECT * FROM plan WHERE plan_id = $plan_id");

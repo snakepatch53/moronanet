@@ -13,12 +13,14 @@ $radapter->getHTML('/index.php', 'home', function ($DATA) {
     $links = (new LinkDao($DATA['mysqlAdapter']))->select();
     $social = (new SocialDao($DATA['mysqlAdapter']))->select();
     $slider = (new SliderDao($DATA['mysqlAdapter']))->select();
+    $basic_plan_price = (new PlanDao($DATA['mysqlAdapter']))->selectBasicPlan_price();
     return [
         'info' => $info,
         'planes' => $planes,
         'links' => $links,
         'social' => $social,
         'slider' => $slider,
+        'basic_plan_price' => $basic_plan_price
     ];
 });
 
@@ -28,12 +30,14 @@ $radapter->getHTML('/', 'home', function ($DATA) {
     $links = (new LinkDao($DATA['mysqlAdapter']))->select();
     $social = (new SocialDao($DATA['mysqlAdapter']))->select();
     $slider = (new SliderDao($DATA['mysqlAdapter']))->select();
+    $basic_plan_price = (new PlanDao($DATA['mysqlAdapter']))->selectBasicPlan_price();
     return [
         'info' => $info,
         'planes' => $planes,
         'links' => $links,
         'social' => $social,
         'slider' => $slider,
+        'basic_plan_price' => $basic_plan_price
     ];
 });
 

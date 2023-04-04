@@ -22,7 +22,9 @@
         <div class="col">
             <h1>Moronanet</h1>
             <h2>INTERNET POR FIBRA ÓPTICA</h2>
-            <H3>Servicio de internet desde $20.00 al mes</H3>
+            <H3>Servicio de internet desde $<?= $DATA['basic_plan_price'] ?> al mes</H3>
+            <?php
+            ?>
             <a href="<?= $DATA['http_domain'] ?>contactos">
                 <span>Contáctanos</span>
             </a>
