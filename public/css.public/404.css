@@ -111,11 +111,14 @@ main img {
 
 
 /*STARS*/
+body {
+    background: #22303a;
+}
+
 main {
     height: calc(100vh - var(--header-height) - 35px);
     position: relative;
-    background: #22303a;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .stars {}
@@ -138,6 +141,7 @@ main {
     from {
         box-shadow: 0 0 20px 2px var(--brigth-color);
     }
+
     to {
         box-shadow: 0 0 0 0 var(--brigth-color);
     }
