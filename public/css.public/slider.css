@@ -29,12 +29,15 @@ slider img {
 slider {
     --background1: #0068BF;
     --background2: #ffffff;
-    --background3: #65AE26;
+/*    --background3: #65AE26;*/
     --background4: #292D3E;
     --color1: #3C3C3C;
     --color2: #ffffff;
-    --color3: #65AE26;
+/*    --color3: #65AE26;*/
     --color4: #0378C0;
+
+    --background3: var(--global_background3);
+    --color3: var(--global_color3);
 
 }
 

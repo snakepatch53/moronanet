@@ -1,19 +1,27 @@
 body {
     --background1: #0068BF;
     --background2: #ffffff;
-    --background3: #65AE26;
+    /*    --background3: #65AE26;*/
     --background4: #292D3E;
     --background5: #323232;
     --background6: #F6F4F2;
     --color1: #3C3C3C;
     --color2: #ffffff;
-    --color3: #65AE26;
+    /*    --color3: #65AE26;*/
     --color4: #0378C0;
     --color5: #000000;
     --color6: #213E6E;
 
-    --color-des_home1: #3C9031;
-    --color-des_home2: #255783;
+
+    /*    --color-des_home1: #3C9031;*/
+    /*    --color-des_home2: #255783;*/
+
+
+    /*    NEW THEME*/
+    --color-des_home1: var(--color3);
+    --color-des_home2: var(--color4);
+    --background3: var(--global_background3);
+    --color3: var(--global_color3);
 }
 
 
@@ -66,9 +74,38 @@ section.des-plan .container .card-planes .card {
     grid-gap: 20px;
     text-align: center;
     align-items: center;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
     padding: 30px 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+
+
+    /*    Gradient effect*/
+    background: var(--background1);
+    background: linear-gradient(-45deg, var(--background3) 0%, var(--background1) 0%, var(--background2) 48%, var(--background1) 100%);
+    background-size: 300% 100%;
+    animation: service-page-cardplan-animation 5s ease infinite;
+}
+
+section.des-plan .container .card-planes .card:hover {
+    box-shadow: 0 5px 17px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+    transition: all 0.2s ease;
+}
+
+
+@keyframes service-page-cardplan-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 section.des-plan .container .card-planes .card i {
@@ -109,7 +146,7 @@ section.des-plan .container .card-planes .card h3 span.iva {
     /*    background: #000;
     */
     color: var(--color2);
-/*    color:red;*/
+    /*    color:red;*/
     margin-left: 5px;
     font-weight: normal;
     font-size: 20px;

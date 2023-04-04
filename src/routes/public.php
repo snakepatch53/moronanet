@@ -113,7 +113,14 @@ $radapter->getHTML('/contactos', 'contactos', function ($DATA) {
 
 // 404
 $radapter->set404('404', function ($DATA) {
+    $info = (new InfoDao($DATA['mysqlAdapter']))->select();
+    $planes = (new PlanDao($DATA['mysqlAdapter']))->select();
+    $links = (new LinkDao($DATA['mysqlAdapter']))->select();
+    $social = (new SocialDao($DATA['mysqlAdapter']))->select();
     return [
-        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'info' => $info,
+        'planes' => $planes,
+        'links' => $links,
+        'social' => $social,
     ];
 });

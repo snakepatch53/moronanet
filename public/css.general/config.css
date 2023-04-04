@@ -25,6 +25,13 @@
     --info: #427ad5;
     --warnning: #FFCD42;
     --error: #DD5145;
+    
+    
+    
+    
+    --global_background3: #e3605d;
+    --global_color3: #e3605d;
+    --global-shadow1: 0 0 20px 1px #e3605d;
 }
 
 * {

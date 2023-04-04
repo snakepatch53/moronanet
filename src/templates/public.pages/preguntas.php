@@ -17,8 +17,11 @@
         <section class="des-preguntas">
             <div class="container">
                 <div class="col col1">
-                    <img src="<?= $DATA['http_domain'] ?>public/img/logo.png" alt="Logo Morona Net">
-                    <h1>Morona NET</h1>
+                    <div class="row">
+                        <img class="logo" src="<?= $DATA['http_domain'] ?>public/img/logo.png" alt="Logo Morona Net">
+                        <h1>Morona NET</h1>
+                    </div>
+                    <img class="personaje" src="<?= $DATA['http_domain'] ?>public/img/personaje2.png" alt="Imagen 2 del personaje">
                 </div>
                 <div class="col col2">
                     <h4>CONCEPTOS IMPORTANTES</h4>

@@ -25,11 +25,26 @@
             <?php include('./src/templates/public.component/slider.php') ?>
         </slider>
 
-        <section class="des-home">
+        <!-- <section class="des-home">
             <div class="container">
                 <h3>Comunicación total</h3>
+                
                 <h1><b>Nosotros llegamos,</b> donde nadie mas llega!</h1>
                 <p><?= $DATA['info']['info_desc'] ?></p>
+            </div>
+        </section> -->
+        <section class="des-home" id="particles">
+            <div class="container">
+                <h3>Comunicación total</h3>
+                <h1><b>El internet mas rapido,</b> sin comparticion!</h1>
+                <div class="cols">
+                    <div class="col">
+                        <img src="<?= $DATA['http_domain'] ?>public/img/personaje1.png" width="600" alt="Imagen 1 del personaje">
+                    </div>
+                    <div class="col">
+                        <p><?= $DATA['info']['info_desc'] ?></p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -69,6 +84,9 @@
 <foot>
     <?php include('./src/templates/public.component/foot.php') ?>
     <script src="<?= $DATA['http_domain'] ?>public/js.public/slider.component.js"></script>
+
+    <script src="<?= $DATA['http_domain'] ?>public/library.general/particles.min.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/js.public/home.particles.js"></script>
 </foot>
 
 </html>
