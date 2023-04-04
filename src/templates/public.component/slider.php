@@ -4,7 +4,7 @@
         <!-- Slides -->
         <?php foreach ($DATA['slider'] as $key => $value) { ?>
             <div class="swiper-slide">
-                <img src="<?= $DATA['http_domain'] ?>public/img.slider/<?= $value['slider_img'] ?>" alt="Imagen <?= $value['slider_id'] ?> del slider">
+                <img src="<?= $DATA['http_domain'] ?>public/img.slider/<?= $value['slider_img'] ?>?last=<?= $value['slider_last'] ?>" alt="Imagen <?= $value['slider_id'] ?> del slider">
             </div>
         <?php } ?>
     </div>
@@ -30,7 +30,7 @@
             </a>
         </div>
         <div class="col">
-            <img src="<?= $DATA['http_domain'] ?>public/img/banner.png" alt="Imagen para Banner">
+            <img src="<?= $DATA['http_domain'] ?>public/img/banner.png?last=<?= $DATA['info']['info_last'] ?>" alt="Imagen para Banner">
         </div>
     </div>
 </div>

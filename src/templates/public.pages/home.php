@@ -39,7 +39,7 @@
                 <h1><b>El internet mas rapido,</b> sin comparticion!</h1>
                 <div class="cols">
                     <div class="col">
-                        <img src="<?= $DATA['http_domain'] ?>public/img/personaje1.png" width="600" alt="Imagen 1 del personaje">
+                        <img src="<?= $DATA['http_domain'] ?>public/img/personaje1.png?last=<?= $DATA['info']['info_last'] ?>" width="600" alt="Imagen 1 del personaje">
                     </div>
                     <div class="col">
                         <p><?= $DATA['info']['info_desc'] ?></p>
