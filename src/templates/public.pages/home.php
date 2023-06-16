@@ -41,8 +41,12 @@
                     <div class="col">
                         <img src="<?= $DATA['http_domain'] ?>public/img/personaje1.png?last=<?= $DATA['info']['info_last'] ?>" width="600" alt="Imagen 1 del personaje">
                     </div>
-                    <div class="col">
-                        <p><?= $DATA['info']['info_desc'] ?></p>
+                    <div class="col parrafo">
+                        <p>
+                            <i class="quota left fa fa-quote-left"></i>
+                            <?= $DATA['info']['info_desc'] ?>
+                            <i class="quota rigth fa fa-quote-right"></i>
+                        </p>
                     </div>
                 </div>
             </div>

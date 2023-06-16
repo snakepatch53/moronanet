@@ -65,12 +65,34 @@ section.des-home .container h3 {
     user-select: text;
 }
 
+section.des-home .container .parrafo {
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 5px 16px 0 rgba(0, 0, 0 , 0.3);
+    padding: 20px;
+}
+
+section.des-home .container .parrafo .quota {
+    position: absolute;
+    color: var(--color4);
+}
+
+section.des-home .container .parrafo .quota.left {
+    left: 20px;
+    top: 50px;
+}
+
+section.des-home .container .parrafo .quota.rigth {
+    right: 20px;
+    bottom: 50px;
+}
+
 section.des-home .container p {
-    text-align: center;
+    text-align: justify;
     color: var(--color1);
     font-size: 1.5em;
     /*    color: var(--color4);*/
-    text-shadow: 2px 2px 1px var(--background2), 3px 3px 1px var(--background2), 3.2px 3.2px 2px var(--color4);
     /*    text-align: justify;*/
 }
 
