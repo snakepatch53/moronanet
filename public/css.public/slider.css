@@ -158,9 +158,9 @@ slider .float .col a span {
 slider .float .col img {
     display: block;
     width: 100%;
-    max-width: 400px;
+    max-width:500px;
     height: 100%;
-    max-height: 400px;
+    max-height:500px;
     object-fit: contain;
     object-position: center;
     margin: auto;

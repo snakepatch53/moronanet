@@ -1,10 +1,10 @@
 const swiper = new Swiper(".swiper", {
-    speed: 400,
+    speed: 1000,
     allowTouchMove: true,
     autoplay: {
         delay: 5000,
     },
-    effect: "cards",
+    effect: "fade",
     fadeEffect: {
         crossFade: true,
     },
