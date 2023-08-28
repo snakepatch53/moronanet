@@ -5,8 +5,8 @@ header {
     --color1: #3C3C3C;
     --color2: #ffffff;
     --color4: #0378C0;
-    
-    
+
+
     --background3: var(--global_background3);
     --color3: var(--global_color3);
 }
@@ -17,7 +17,7 @@ header {
     position: relative;
     width: var(--width);
     height: calc(var(--height) + 30px);
-/*    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);*/
+    /*    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);*/
 }
 
 /* mini header */
@@ -103,17 +103,17 @@ header menu nav .logo {
     justify-content: center;
     align-items: center;
     /*    text-align: center;*/
-    /*        padding: 10px;*/
+    /*            padding: 10px;*/
     margin-right: 10px;
     text-decoration: none;
     /*    display: none;*/
 }
 
 header menu nav .logo img {
-    /*    height: 100px;*/
-    /* height: var(--height); */
-    height: calc(var(--height) + 40px);
-    padding: 5px 0;
+        height: 100px;
+/*    height: var(--height);*/
+    /*    height: calc(var(--height) + 40px);*/
+    padding: 10px 0;
 }
 
 header menu nav .logo h1 {
@@ -260,7 +260,7 @@ header menu nav ul.supp li ul li {
 
 header menu nav ul.supp li ul li a {
     display: flex;
-/*    flex-wrap: wrap;*/
+    /*    flex-wrap: wrap;*/
     justify-content: flex-start;
     text-align: left;
     width: 100%;
@@ -284,7 +284,7 @@ header menu nav ul.supp li ul li a span {
 
 header menu nav ul.supp li ul li a i {
     color: var(--color1);
-/*        color: var(--primary_background);*/
+    /*        color: var(--primary_background);*/
     margin-right: 5px;
 }
 

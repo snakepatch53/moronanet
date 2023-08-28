@@ -44,9 +44,11 @@ footer .container .col.about-us .logo {
 }
 
 footer .container .col.about-us .logo img {
-    width: 100px;
-/*    filter: brightness(0) invert(1);*/
-    /*    display: none;*/
+/*    width: 100px;*/
+    width: 100%;
+    filter: brightness(0) invert(1);
+    padding: 0 10px;
+/*        display: none;*/
 }
 
 footer .container .col.about-us .logo span {

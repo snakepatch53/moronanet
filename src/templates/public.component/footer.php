@@ -2,7 +2,7 @@
     <div class="col about-us">
         <a href="#" class="logo">
             <img src="<?= $DATA['http_domain'] ?>public/img/logo.png?last=<?= $DATA['info']['info_last'] ?>" alt="Logo Morona NET">
-            <span><?= $DATA['info']['info_name'] ?></span>
+            <!-- <span><?= $DATA['info']['info_name'] ?></span> -->
         </a>
         <p><?= substr($DATA['info']['info_desc'], 0, 70) ?>..</p>
         <a href="<?= $DATA['http_domain'] ?>contactos" class="button">
