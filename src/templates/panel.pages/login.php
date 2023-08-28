@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/bootstrap.min.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/login.css">
-    <link rel="shortcut icon" href="<?= $DATA['http_domain'] ?>public/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= $DATA['http_domain'] ?>public/img/icon.png?last=<?= $DATA['info']['info_last'] ?>" type="image/x-icon">
     <title><?= $DATA['info']['info_name'] ?> ⚙️ Login</title>
     <script>
         const http_domain = '<?= $DATA['http_domain'] ?>';
