@@ -19,7 +19,7 @@
                 <div class="col col1">
                     <div class="row">
                         <img class="logo" src="<?= $DATA['http_domain'] ?>public/img/logo.png" alt="Logo Morona Net">
-                        <h1>Morona NET</h1>
+                        <!-- <h1>Morona NET</h1> -->
                     </div>
                     <img class="personaje" src="<?= $DATA['http_domain'] ?>public/img/personaje2.png?last=<?= $DATA['info']['info_last'] ?>" alt="Imagen 2 del personaje">
                 </div>
