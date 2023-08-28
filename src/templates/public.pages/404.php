@@ -61,7 +61,8 @@
     </main>
 
     <!-- <footer id="section-footer">
-        <?php include('./src/templates/public.component/footer.php') ?>
+        <?php //include('./src/templates/public.component/footer.php') 
+        ?>
     </footer> -->
 </body>
 
