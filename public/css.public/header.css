@@ -88,6 +88,11 @@ header.float menu {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+header.float menu nav ul.supp li a span {
+    font-weight: normal;
+}
+
+
 header menu nav {
     display: flex;
     justify-content: space-between;
