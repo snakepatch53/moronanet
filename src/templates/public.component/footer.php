@@ -31,7 +31,6 @@
         <h3>Información</h3>
         <?php foreach ($DATA['links'] as $key => $link) { ?>
             <a href="<?= $link['link_ref'] ?>"><?= $link['link_name'] ?></a>
-            <a href="<?= $link['link_ref'] ?>"><?= $link['link_ref'] ?></a>
         <?php } ?>
     </div>
 </div>
