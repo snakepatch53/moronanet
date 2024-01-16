@@ -15,7 +15,7 @@ class LinkDao
         $resultset = $this->mysqlAdapter->query("SELECT * FROM link");
         $result = [];
         while ($row = mysqli_fetch_assoc($resultset)) {
-            $result[] = $row;
+            $result[] = $this->schematize($row);
         }
         return $result;
     }
@@ -23,7 +23,7 @@ class LinkDao
     {
         $resultset = $this->mysqlAdapter->query("SELECT * FROM link WHERE link_id = $link_id");
         $row = mysqli_fetch_assoc($resultset);
-        return $row;
+        return $this->schematize($row);
     }
 
     public function insert(
@@ -51,5 +51,15 @@ class LinkDao
     public function delete(int $link_id)
     {
         return $this->mysqlAdapter->query("DELETE FROM link WHERE link_id = $link_id ");
+    }
+
+    public function schematize($row)
+    {
+        // if link_ref include localhost, replace with http_domain
+        if (strpos($row['link_ref'], 'localhost') !== false) {
+            $row['link_ref'] = str_replace('localhost/', $_ENV['HTTP_DOMAIN'] . "public/uploads.general/", $row['link_ref']);
+        }
+
+        return $row;
     }
 }
