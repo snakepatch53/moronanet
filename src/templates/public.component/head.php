@@ -11,6 +11,8 @@
 <link rel="icon" href="<?= $DATA['http_domain'] ?>public/img/icon.png?last=<?= $DATA['info']['info_last'] ?>" />
 <title>Moronanet - <?= $DATA['title'] ?></title>
 
+<script src="https://cdn.tailwindcss.com"></script>
+
 <script>
     const http_domain = '<?= $DATA['http_domain'] ?>';
 </script>
